@@ -5,15 +5,15 @@ CS(Computer Science)
 컴퓨터 과학에서 효율적인 접근 및 수정을 가능케 하는 자료의 조직, 관리, 저장을 의미합니다. 더 정확히 말해, 자료 구조는 **데이터 값의 모임, 또 데이터 간의 관계, 그리고 데이터에 적용할 수 있는 함수나 명령**을 의미합니다.
 
 ### 1. 해시 테이블 (Hash table)
-##### 키를 값에 매핑할 수 있는 구조인, 연관 배열 추상 자료형(ADT)을 구현하는 자료구조다.
+#### 키를 값에 매핑할 수 있는 구조인, 연관 배열 추상 자료형(ADT)을 구현하는 자료구조
 *ADT(Abstract Data Type) : 컴퓨터 과학에서 자료들과 그 자료들에 대한 연산들을 명기한 것. ADT는 구현 방법을 명시하고 있지 않다는 점에서 자료 구조와 다르다.*
 * 분할 상환 분석에 따른 **시간 복잡도가 O(1)**. 덕분에 데이터 양에 관계 없이 빠른 성능을 기대할 수 있다!
 
-##### 해시 함수 (Hash Function)
+#### 해시 함수 (Hash Function)
 임의 크기 데이터를 고정 크기 값으로 매핑하는 데 사용할 수 있는 함수.
 * 정수형 해싱 기법 - 모듈로 연산을 이용한 나눗셈 방식
 
-##### 로드 팩터 (Load Factor)
+#### 로드 팩터 (Load Factor)
 해시 테이블에 저장된 **데이터 개수를 버킷의 개수로 나눈 것**.
 로드 팩터 비율에 따라서 해시 함수를 재작성해야 될지 또는 해시 테이블의 크기를 조정해야 할지를 결정한다. 또한, 해시 함수의 효율성 측정에도 사용된다. 로드 팩터가 증가할 수록 해시 테이블의 성능은 점점 감소하게 된다.
 
@@ -40,13 +40,13 @@ CS(Computer Science)
 <hr/>
 
 ### 2. 우선순위 큐 (Priority Queue)
-##### 어떠한 특정 조건에 따라 우선순위가 가장 높은 요소가 추출되는 자료형이다.
+#### 어떠한 특정 조건에 따라 우선순위가 가장 높은 요소가 추출되는 자료형
 * 정렬 알고리즘을 사용하면 우선순위 큐를 만들 수 있다.
     * n 개의 요소를 정렬하는 데 S(n)의 시간이 든다고 할 때, 새 요소를 삽입하거나 요소를 삭제하는 데는 O(S(n))의 시간이 걸린다. 반면 내림차순으로 정렬했을 때 최댓값을 가져오는 것은 맨 앞의 값을 가져오기만 하면 되므로 O(1)로 가능하다. 대개 정렬에는 O(nlogn)이 필요하기 때문에 O(S(n))은 O(nlogn) 정도가 든다.
     * 그러나 실제로는 이처럼 단순 정렬보다는 힙 정렬 등의 좀 더 효율적인 방법을 사용한다!
 * 최단 경로를 탐색하는 다익스트라 알고리즘 등에 활용된다!
 
-##### PriorityQueue VS heapq
+#### PriorityQueue VS heapq
 * 파이썬에서 우선순위 큐는 queue 모듈의 PriorityQueue 클래스를 이용해 사용할 수 있다. 하지만 PriorityQueue조차 내부적으로는 힙을 사용한 heapq를 사용하도록 구현되어 있다.
 * 둘의 차이점은 PriorityQueue 클래스는 **스레드 세이프 클래스**이지만, heapq 모듈은 스레드 세이프를 보장하지 않는다!
 * PriorityQueue 클래스가 스레드 세이프를 보장하기 때문에 내부적으로 락킹을 제공하여 락킹 오버헤드가 발생해 성능에 영향을 미친다.
@@ -56,11 +56,148 @@ CS(Computer Science)
 <hr/>
 
 ### 3. 힙 (Heap)
-##### 최소 힙에서는 부모가 항상 자식보다 작거나 같다는 힙의 특성을 만족하는 거의 완전한 트리인 특수한 트리 기반의 비선형 자료구조
+#### 최소 힙에서는 부모가 항상 자식보다 작거나 같다는 힙의 특성을 만족하는 거의 완전한 트리인 특수한 트리 기반의 비선형 자료구조
 * 파이썬에서는 최소 힙만 구현되어 있다.
     * 최소 힙은 부모가 항상 자식보다 작기 때문에 루트가 결국 가장 작은 값을 갖게 되며, 우선순위 큐에서 가장 작은 값을 추출하는 것은 매번 힙의 루트를 가져오는 형태로 구현된다.
     * 우선순위 큐 ADT는 주로 힙으로 구현하고, 힙은 주로 배열로 구현한다. -> 결국 우선순위 큐는 배열로 구현하는 셈이다!
 * 자식 노드가 둘인 힙을 **이진 힙(Binary Heap)** 이라고 부르며 가장 많이 쓰인다.
 * 완전 이진 트리 형태인 이진 힙은 배열에 빈틈없이 배치가 가능하며, 트리의 배열 표현의 경우 계산을 편하게 하기 위해 인덱스는 1부터 사용한다.
+
+<hr/>
+
+### 4. 그래프 (Graph)
+#### 정점과 그 정점을 연결하는 간선을 하나로 모아 놓은 자료 구조
+* **오일러 경로 (Eulerian Trail / Eulerian Path)**
+    * 모든 간선을 한번씩만 방문하는 유한 그래프 (= 한붓 그리기)
+    * 오일러의 정리(Euler's Theorem) : 모든 정점이 짝수 개의 차수를 갖는다면 모든 다리를 한 번씩만 건너서 도달하는 것이 성립한다.
+
+* **해밀턴 경로 (Hamiltonian Path)**
+    * 각 정점을 한 번씩 방문하는 무향 또는 유향 그래프. 대표적인 NP-완전 문제.
+    * 오일러 경로와의 차이점 : 오일러 경로는 **간선**을 기준으로 하고 해밀턴 경로는 **정점**을 기준으로 한다는 점.
+    
+* 그래프 순회
+    * 그래프 순회란 그래프 탐색이라고도 불리우며 그래프의 각 정점을 방문하는 과정.
+    * 그래프 순회에는 **크게 깊이 우선 탐색(DFS)** 과 **너비 우선 탐색(BFS)** 의 2가지 알고리즘이 있다.
+        * 일반적으로 DFS가 더 널리 쓰임.
+    * 그래프를 표현하는 방법에는 크게 인접 행렬과 인접 리스트의 2가지 방법이 있다.
+        * 인접 리스트는 출발 노드를 키로, 도착 노드를 값으로 표현할 수 있다. 도착 노드는 여러 개가 될 수 있으므로 리스트 형태로 표현한다.
+
+```
+graph = {
+    1: [2, 3, 4],
+    2: [5],
+    3: [5],
+    4: [],
+    5: [6, 7],
+    6: [],
+    7: [3]
+}
+```
+
+#### 깊이 우선 탐색 (DFS)
+* 일반적으로 스택으로 구현하며, 재귀를 이용하면 좀 더 간단하게 구현할 수 있다. 재귀 구현이 더 선호되는 편.
+
+##### 재귀 구조로 구현
+
+재귀를 이용한 DFS 구현 수도 코드
+* 정점 v의 모든 인접 유향 간선들을 반복하는 구조로 구
+```
+DFS(G, v)
+    label v as discovered
+    for all directed edges from v to w that are in G.adjacentEdges(v) do
+        if vertex w is not labeled as discoved then
+            recursively call DFS(G, w)
+```
+
+재귀를 이용한 DFS 구현 Python 코드
+* 방문했던 정점 (discovered)를 계속 누적된 결과로 만들기 위해 리턴하는 형태만 받아오도록 처리한 코드
+```
+def recursive_dfs(v, discovered=[]):
+    discovered.append(v)
+    for w in graph[v]:
+        if not w in discovered:
+            discovered = recursive_dfs(w, discovered)
+    return discovered
+```
+
+##### 스택을 이용한 반복 구조로 구현
+
+반복을 이용한 DFS 구현 수도 코드
+* 스택을 이용해 모든 인접 간선을 추출하고 다시 도착점인 정점을 스택에 삽입하는 구조로 구현
+```
+DFS-iterative(G, v)
+    let S be a stack
+    S.push(v)
+    while S is not empty do
+        v = S.pop()
+        if v is not labeled as discovered then
+        label v as discovered
+        for all edges from v to w in G.adjacentEdges(v) do
+            S.push(w)
+```
+
+반복을 이용한 DFS 구현 Python 코드
+```
+def iterative_dfs(start_v):
+    discovered = []
+    stack = [start_v]
+    while stack:
+        v = stack.pop()
+        if v not in discovered:
+            discovered.append(v)
+            for w in graph[v]:
+                stack.append(w)
+    return discovered
+```
+
+#### 너비 우선 탐색 (BFS)
+* DFS보다 쓰임새는 적지만, 최단 경로를 찾는 다익스트라 알고리즘 등에 매우 유용하게 쓰인다.
+* 재귀로 동작하지 않고, **큐를 이용하는 반복 구현만 가능**하다!
+
+##### 큐를 이용한 반복구조로 구현
+
+큐를 이용한 BFS 수도 코드
+* 모든 인접 간선을 추출하고 도착점인 정점을 큐에 삽입하는 코드
+```
+BFS(G, start_v)
+    let Q be a queue
+    label start_v as discovered
+    Q.enqueue(start_v)
+    while Q is not empty do
+    v := Q.dequeue()
+    if v is the goal then
+        return v
+    for all edges from v to w in G.adjacentEdges(v) do
+        if w is not labeled as discovered then
+            label w as discovered
+            w.parent := v
+            Q.enqueue(w)
+```
+
+큐를 이용한 BFS Python 코드
+```
+def iterative_bfs(start_v):
+    discovered = [start_v]
+    queue = [start_v]
+    while queue:
+        v = queue.pop(0)
+        for w in graph[v]:
+            if w not in discovered:
+                discovered.append(w)
+                queue.append(w)
+    return discovered
+
+```
+
+#### 백트래킹 (Backtracking)
+* 해결책에 대한 후보를 구축해 나아가다 가능성이 없다고 판단되는 즉시 후보를 포기해 정답을 찾아가는 범용적인 알고리즘으로 제약 충족 문제에 특히 유용하다.
+* 쉽게 말하면, 탐색을 하다가 더 갈 수 없으면 왔던 길을 되돌아가 다른 길을 찾는다.
+* 주로 재귀로 구현하며, 기본적으로 모두 DFS의 범주에 속한다.
+* DFS로 탐색을 시도하고, 가능성이 없는 후보는 즉시 포기하고 백트래킹한다면 트리의 불필요한 거의 대부분을 버릴 수 있다. -> **트리의 가지치기**라고 한다!
+    * 가지치기는 트리의 탐색 최적화 문제와도 관련이 깊다.
+
+* 제약 충족 문제 (Constraint Satisfaction Problems; CSP)
+    * 수많은 제약 조건을 충족하는 상태를 찾아내는 수학 문제. 가지치기를 통해 최적화할 수 있다.
+    * 예를 들면, 스도쿠, 십자말풀이같은 문제들이 있다.
 
 <hr/>
