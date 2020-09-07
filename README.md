@@ -2,7 +2,7 @@
 ### All of my study
 
 * Baekjoon : https://www.acmicpc.net/user/jsshin1549
-* solved.ac : https://solved.ac/profile/jsshin1549 - Silver 3
+* solved.ac : https://solved.ac/profile/jsshin1549 - Silver 2
 * Programmers
 * Computer Science
 
@@ -14,4 +14,5 @@
 - 2020.09.02 - solved.ac Silver 3 달성
 - 2020.09.03 - Baekjoon 랭킹 10000등 돌파
 - 2020.09.03 - Repository Commit 100회 돌파
+- 2020.09.07 - solved.ac Silver 2 달성
 <hr/>
