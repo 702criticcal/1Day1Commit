@@ -40,5 +40,26 @@ def solution(numbers):
     for num in made_nums:
         if check[num] == True:
             cnt += 1
+    return cnt
 
+# 간단하게 체를 없애보았다. made_nums에서 해당 수가 소수인지 바로 판별하여 소수일 경우 cnt += 1을 해주었다. 왜 이게 생각이 안났지...
+from itertools import permutations
+
+def solution(numbers):
+    cnt = 0
+    made_nums = []
+    for i in range(1, len(numbers) + 1):
+        made_nums += map(int, (map(''.join, permutations(numbers, i))))
+    made_nums = set(made_nums)
+
+    for num in made_nums:
+        isPrime = True
+        if num < 2:
+            continue
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                isPrime = False
+                break
+        if isPrime:
+            cnt += 1
     return cnt
