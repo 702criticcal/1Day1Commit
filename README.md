@@ -15,6 +15,6 @@
 - 2020.09.03 - Baekjoon 랭킹 10000등 돌파
 - 2020.09.03 - Repository Commit 100회 돌파
 - 2020.09.07 - solved.ac Silver 2 달성
-- 2020.09.07 - solved.ac Silver 1 달성
+- 2020.09.16 - solved.ac Silver 1 달성
 - 2020.09.18 - Baekjoon 200문제 풀이
 <hr/>
