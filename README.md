@@ -18,4 +18,5 @@
 - 2020.09.16 - solved.ac Silver 1 달성
 - 2020.09.18 - Baekjoon 200문제 풀이
 - 2020.09.16 - solved.ac Class 3 달성
+- 2020.09.22 - Baekjoon 랭킹 5000등 돌파
 <hr/>
