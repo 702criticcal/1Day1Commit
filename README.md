@@ -2,9 +2,10 @@
 ### All of my study
 
 * Baekjoon : https://www.acmicpc.net/user/jsshin1549
-* solved.ac : https://solved.ac/profile/jsshin1549 - Silver 1 / *Class 3*
+* solved.ac : https://solved.ac/profile/jsshin1549 - Gold 5 / *Class 3*
 * Programmers
 * Computer Science
+* Python
 
 <hr/>
 
@@ -19,4 +20,5 @@
 - 2020.09.18 - Baekjoon 200문제 풀이
 - 2020.09.16 - solved.ac Class 3 달성
 - 2020.09.22 - Baekjoon 랭킹 5000등 돌파
+- 2020.09.29 - solved.ac Gold 5 달성, Baekjoon 250문제 풀이
 <hr/>
