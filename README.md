@@ -21,4 +21,5 @@
 - 2020.09.16 - solved.ac Class 3 달성
 - 2020.09.22 - Baekjoon 랭킹 5000등 돌파
 - 2020.09.29 - solved.ac Gold 5 달성, Baekjoon 250문제 풀이
+- 2020.10.03 - Baekjoon 랭킹 4000등 돌파
 <hr/>
