@@ -1,7 +1,7 @@
 # 1Day1Commit
 ### All of my study
 
-* Tistory(Blog) : https://702iscriticcal.tistory.com/
+* 울머기의 궁전 (Blog) : https://702iscriticcal.tistory.com/
 * Baekjoon : https://www.acmicpc.net/user/jsshin1549
 * solved.ac : https://solved.ac/profile/jsshin1549 - Gold 5 / *Class 3*
 * Programmers
@@ -24,4 +24,5 @@
 - 2020.09.29 - solved.ac Gold 5 달성, Baekjoon 250문제 풀이
 - 2020.10.03 - Baekjoon 랭킹 4000등 돌파
 - 2020.10.05 - Programmers 순위 1000등 돌파, Blog 시작
+- 2020.10.28 - Baekjoon 300문제 풀이
 <hr/>
