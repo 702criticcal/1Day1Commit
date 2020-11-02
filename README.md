@@ -25,5 +25,5 @@
 - 2020.10.03 - Baekjoon 랭킹 4000등 돌파
 - 2020.10.05 - Programmers 순위 1000등 돌파, Blog 시작
 - 2020.10.28 - Baekjoon 300문제 풀이
-- 2020.11.02 - solved.ac Gold 4 달성, solved.ac Class 4 달성
+- 2020.11.02 - solved.ac Gold 4 달성, solved.ac Class 4 달성, Programmers 100문제 풀이
 <hr/>
