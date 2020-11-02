@@ -3,7 +3,7 @@
 
 * 울머기의 궁전 (Blog) : https://702iscriticcal.tistory.com/
 * Baekjoon : https://www.acmicpc.net/user/jsshin1549
-* solved.ac : https://solved.ac/profile/jsshin1549 - Gold 5 / *Class 3*
+* solved.ac : https://solved.ac/profile/jsshin1549 - Gold 4 / *Class 4*
 * Programmers
 * Computer Science
 * Python
@@ -25,4 +25,5 @@
 - 2020.10.03 - Baekjoon 랭킹 4000등 돌파
 - 2020.10.05 - Programmers 순위 1000등 돌파, Blog 시작
 - 2020.10.28 - Baekjoon 300문제 풀이
+- 2020.11.02 - solved.ac Gold 4 달성, solved.ac Class 4 달성
 <hr/>
