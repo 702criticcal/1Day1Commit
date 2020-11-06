@@ -3,7 +3,7 @@ def dfs(countries):
     visited = []
 
     while stack:
-        country = stack[-1] # 현재 있는 공항.
+        country = stack[-1]  # 현재 있는 공항.
         # 현재 공항에서 출발하는 항공권이 없을 때,
         if country not in countries or len(countries[country]) == 0:
             # 스택에서 pop하여 visited에 해당 공항 추가.
@@ -32,3 +32,35 @@ def solution(tickets):
         countries[k] = sorted(countries[k], reverse=True)
 
     return dfs(countries)
+
+
+# 2020.11.06 2차 풀이.
+from collections import defaultdict
+
+
+def bfs(flights):
+    stack = ["ICN"]
+    visited = []
+
+    while stack:
+        airport = stack[-1]
+        if airport not in flights:
+            visited.append(stack.pop())
+        else:
+            stack.append(flights[airport].pop())
+            if len(flights[airport]) == 0:
+                del flights[airport]
+
+    return visited[::-1]
+
+
+def solution(tickets):
+    flights = defaultdict(list)
+
+    for i in tickets:
+        flights[i[0]] += [i[1]]
+
+    for k in flights:
+        flights[k].sort(reverse=True)
+
+    return bfs(flights)
