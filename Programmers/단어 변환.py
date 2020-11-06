@@ -25,3 +25,38 @@ def solution(begin, target, words):
                 queue.append([w, cnt + 1])
                 words.remove(w)
     return 0
+
+
+# 2020.11.06 2차 풀이.
+from collections import deque
+
+
+def check(word1, word2):
+    diff = 0
+
+    for i in range(len(word1)):
+        if word1[i] != word2[i]:
+            diff += 1
+
+    if diff == 1:
+        return True
+    else:
+        return False
+
+
+def solution(begin, target, words):
+    queue = deque()
+    queue.append((begin, 0))
+
+    while queue:
+        word, cnt = queue.popleft()
+
+        if word == target:
+            return cnt
+
+        for i in range(len(words)):
+            if words[i] != 0 and check(word, words[i]):
+                queue.append((words[i], cnt + 1))
+                words[i] = 0
+
+    return 0
