@@ -20,3 +20,10 @@ def solution(brown, yellow):
             # yellow의 둘레와 brown의 안쪽 둘레가 같으면 리턴한다.
             if 2 * (i + yellow // i) == brown - 4:
                 return [yellow // i + 2, i + 2]
+
+
+# 2020.11.24 2차 풀이.
+def solution(brown, yellow):
+    for i in range(1, int(yellow ** (1 / 2)) + 1):
+        if yellow % i == 0 and 2 * (i + yellow // i) == brown - 4:
+            return [yellow // i + 2, i + 2]
