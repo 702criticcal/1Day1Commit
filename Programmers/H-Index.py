@@ -16,3 +16,12 @@ def solution(citations):
         if citations[i] >= l - i:
             return l - i
     return 0
+
+
+# 2020.11.26 2차 풀이.
+def solution(citations):
+    citations.sort()
+    for i in range(len(citations)):
+        if citations[i] >= len(citations) - i:
+            return len(citations) - i
+    return 0
