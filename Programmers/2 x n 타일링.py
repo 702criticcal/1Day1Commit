@@ -21,3 +21,14 @@ def solution(n):
         dp1, dp2 = dp2, dp
 
     return dp % 1000000007
+
+
+# 2020.11.28 2차 풀이.
+# 저번에 풀었을 때보다 변수를 하나 더 줄여서 풀었다!
+def solution(n):
+    dp1, dp2 = 1, 2
+
+    for i in range(n - 2):
+        dp1, dp2 = dp2, dp1 + dp2
+
+    return dp2 % 1000000007
