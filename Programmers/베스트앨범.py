@@ -24,3 +24,24 @@ def solution(genres, plays):
             answer.append(sorted_g[1][0])
 
     return answer
+
+
+# 2020.11.29 2차 풀이.
+from collections import defaultdict
+
+
+def solution(genres, plays):
+    answer = []
+    genrePlay = defaultdict(list)
+    for i in range(len(genres)):
+        genrePlay[genres[i]] += [[plays[i], i]]
+
+    genreSort = sorted(genrePlay.keys(), key=lambda x: -sum([t[0] for t in genrePlay[x]]))
+
+    for g in genreSort:
+        temp = [a[1] for a in sorted(genrePlay[g], key=lambda x: (-x[0], x[1]))]
+        if len(temp) < 2:
+            answer += temp[:len(temp)]
+        else:
+            answer += temp[:2]
+    return answer
