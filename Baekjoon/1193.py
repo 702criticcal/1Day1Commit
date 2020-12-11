@@ -1,12 +1,11 @@
-num = int(input())
+x = int(input())
+line = 1
 
-for i in range(0, num):
-    if i < num:
-        num -= i
-        continue
-    break
+while x > line:
+    x -= line
+    line += 1
 
-if (i % 2) != 0:
-    print(f'{i - (num - 1)}/{1 + (num - 1)}')
+if line % 2 == 0:
+    print(f'{x}/{line - x + 1}')
 else:
-    print(f'{1 + (num - 1)}/{i - (num - 1)}')
+    print(f'{line - x + 1}/{x}')
